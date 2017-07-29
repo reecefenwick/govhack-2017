@@ -1,0 +1,12 @@
+{
+  "name": "bizinga",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "serverless": "^1.18.1",
+    "serverless-single-page-app-plugin": "^1.0.2"
+  },
+  "scripts": {
+    "deploy": "aws s3 sync plain s3://govhack2017-reece --profile govhack"
+  }
+}
