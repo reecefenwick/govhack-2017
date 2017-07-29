@@ -4,6 +4,14 @@ import { Typeahead } from 'react-bootstrap-typeahead';
 import './App.css';
 import EmploymentProjections from './data/EmploymentProjections'
 
+// Typahead stuff
+// ==============
+// <Typeahead
+//   labelKey="industry"
+//   options={options}
+//   placeholder="Type your industry..."
+// />
+
 class App extends Component {
   render() {
     console.log(EmploymentProjections);
@@ -15,18 +23,18 @@ class App extends Component {
     ];
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+        <div className="container App-container">
+          <div className="row App-header-container">
+            <div className="col-md-12">
+            </div>
+          </div>
+          <div className="row App-form-container">
+            <div className="col-md-6 App-form-industry">
+            </div>
+            <div className="col-md-6 App-form-location">
+            </div>
+          </div>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Typeahead
-          labelKey="name"
-          options={options}
-          placeholder="Choose a state..."
-        />
       </div>
     );
   }
