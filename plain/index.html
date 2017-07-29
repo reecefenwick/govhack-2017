@@ -14,13 +14,21 @@
     color:#0dc3a0;
     background:url("img/bg-industry.jpg");
     padding-top:20%;
+    -webkit-transition: width 1s; /* For Safari 3.1 to 6.0 */
+    transition: width 1s;
+    width:50vw;
   } 
   .search2{
     height: 90vh;
     background-color:#008aff;
     color:#008aff;
-        background:url("img/bg-location.jpg");
-         padding-top:20%;
+    background:url("img/bg-location.jpg");
+    padding-top:20%;
+    -webkit-transition: width 1s; /* For Safari 3.1 to 6.0 */
+    transition: width 1s;
+    width:50vw;
+    right:0;
+    position:absolute;
   }
 
   .search1 .btn, .search2 .btn{
@@ -30,12 +38,37 @@
     text-align: center;
   }
 
+  .searchfield{
+    font-size:15px;
+    border-radius: 50px;
+    padding:5px;
+    border:none;
+  }
+  #industryForm, #locationForm{
+    display: none;
+  }
+
   .search1 p, .search2 p{
     color:white;
     font-size:3em;
     text-align: center;
   }
 
+.back{
+  display:none;
+  position:fixed;
+  z-index: 10;
+  font-size:20pt;
+  margin-top:50vh;
+  cursor: pointer;
+}
+
+#back1{
+  right:20px;
+}
+#back2{
+  left:20px;
+}
   .test{
     height:90vh;
   }
@@ -64,35 +97,60 @@
       </li>
      
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+
   </div>
 </nav>
 
     <div class="container-fluid">
+                  <a src="#" class="back" id="back1">  <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+</a>
+                  <a src="#" class="back" id="back2"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
+
+
 <div class="row">
 
-  <div class="col-xs-6 search1 text-center align-items-center">
-
-      <p class="col-xs-8 col-xs-offset-2"> Find the optimal location for your dream business.</p>
-    <button class="btn btn-defualt"type="">Search by industry</button>
+  <div class="search1 align-items-center">
+<div class="row">
+      <p class="col-xs-6 col-xs-offset-3"> Find the optimal location for your dream business.</p>
    </div>
-  <div class="col-xs-6 search2 text-center align-items-center">
+    <div class="row justify-content-center">
+      <button id="searchIndustry" class="btn btn-defualt"type="">Search by industry</button>
+     <form action="" id="industryForm">
+       
+      <input class="searchfield" name="" value="" placeholder="Search by industry">
+          <input type="submit" name="" value="Search">
 
-      <p class="col-xs-8 col-xs-offset-2">
+           </form>
+
+   </div>
+
+
+    </div>
+  <div class="search2 text-center align-items-center">
+<div class="row">
+      <p class="col-xs-6 col-xs-offset-3">
   Explore opportunities by location.
 </p>
-    <button class="btn btn-defualt"type="">Search by location</button>
+</div>
+<div class="row justify-content-center">
+    <button id="searchLocation"class="btn btn-defualt"type="">Search by location</button>
+    <form action="" id="locationForm">     
+    <input class="searchfield" name="" value="" placeholder="Search by location">
+    <input type="submit" name="" value="Search">
+    </form>
+
+</div>
 
   </div>
 </div>
 </div>
+<script
+  src="http://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script src="script.js"></script>
 
-
-
-
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</script>
   </body>
 </html>
