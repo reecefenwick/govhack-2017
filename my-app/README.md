@@ -1,8 +1,13 @@
 #GovHack notes
 
+## Endpoints
 http://govhack2017-reece.s3-ap-southeast-2.amazonaws.com/index.html
 
+Reeces-MacBook-Pro:my-app reecefenwick$ sls domainInfo --aws-profile govhack
+Serverless: Web App Domain: ddzrsms15rw27.cloudfront.net
 
+
+# OLD
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
