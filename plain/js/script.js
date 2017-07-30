@@ -126,8 +126,8 @@ function displayResultsForLocation(location)  {
 
 function updateText(typeOfSearch, inputText) {
   $('.top-content').html(
-    "<h3>" + typeOfSearch + "</h3><br />" +
-    "<p>" + inputText + "</p>"
+    "<ul><li><h3>" + typeOfSearch + "</h3></li>" +
+    "<li><p>" + inputText + "</p></li></ul>"
   );
 }
 
