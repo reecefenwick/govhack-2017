@@ -53,6 +53,8 @@ h2 {
   background: #ffffff;
   padding: 12px 100px 12px 100px;
   text-decoration: none;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .blue-font { color:#2980b9; }
@@ -111,6 +113,10 @@ h2 {
   height: 150px;
   padding: 20px;
   color: white;
+}
+
+#logo {
+  margin-top:25px;
 }
 
 .home-container {
