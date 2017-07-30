@@ -88,6 +88,7 @@ function displayResultsForIndustry(industry)  {
   $('.home-container').fadeOut('slow');
   var locations = rankLocationsByIndustry(industry);
   $('.results-container').fadeIn('slow');
+  instantiateMaps('industry-map-container', -12.043333, -77.028333);
 }
 
 function displayResultsForLocation(location)  {
@@ -95,8 +96,18 @@ function displayResultsForLocation(location)  {
   $('.home-container').fadeOut('slow');
   var industries = rankIndustriesByLocation(location);
   $('.results-container').fadeIn('slow');
+  instantiateMaps('location-map-container', -12.043333, -77.028333);
 }
 
+function instantiateMaps(div, latitude, longitude) {
+    $('#' + div).fadeIn('slow');
+    var map = new GMaps({
+      div: '#' + div,
+      lat: latitude,
+      lng: longitude,
+      zoom: div === 'location-map-container' ? 17 : 15
+    });
+}
 
 function getListOfIndustries(EmploymentProjections) {
   return Array.from(new Set(EmploymentProjections.map(p => p.Industry)));
