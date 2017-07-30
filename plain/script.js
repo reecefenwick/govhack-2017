@@ -52,6 +52,29 @@ locationResultsFiltered = $.grep( EmploymentProjections, function( n, i ) {
   return n.Region==='Central Coast';
 });
 
+industryResultsFiltered = $.grep( EmploymentProjections, function( n, i ) {
+  return n.Industry==='Agriculture, Forestry and Fishing' && n.Level === 6;
+});
+
+// var industryResultsFilteredChartsData = [];
+// for (var i = 0; i <industryResultsFilteredChartsData.length; i++) {
+//     industryResultsFilteredChartsData.push(industryResultsFiltered[i].ProjectedEmploymentLevel);
+// }
+//
+// var industryResultsFilteredChartsRegions = [];
+// for (var i = 0; i <industryResultsFilteredChartsRegions.length; i++) {
+//     industryResultsFilteredChartsRegions.push(industryResultsFiltered[i].Region);
+// }
+
+var industryResultsFilteredChartsData  = [];
+for (var i = 0; i <industryResultsFiltered.length; i++) {
+    industryResultsFilteredChartsData.push(industryResultsFiltered[i].ProjectedEmploymentLevel);
+}
+
+var industryResultsFilteredChartsRegions  = [];
+for (var i = 0; i <industryResultsFiltered.length; i++) {
+    industryResultsFilteredChartsRegions.push(industryResultsFiltered[i].Region);
+}
 
 var locationsFilteredChartsData = [];
 for (var i = 0; i <locationResultsFiltered.length; i++) {
@@ -87,7 +110,7 @@ var ctx = document.getElementById("canvas").getContext('2d');
 
 var canvas = document.getElementById('canvas');
 var data = {
-    labels: locationsFilteredChartsIndustries, //locationsFilteredChartsLabels, //chartsLabels,
+    labels: industryResultsFilteredChartsRegions, //locationsFilteredChartsIndustries, //locationsFilteredChartsLabels, //chartsLabels,
     //  ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
         {
@@ -97,7 +120,7 @@ var data = {
             borderWidth: 2,
             hoverBackgroundColor: "rgba(255,99,132,0.4)",
             hoverBorderColor: "rgba(255,99,132,1)",
-            data: locationsFilteredChartsData, //chartsData,
+            data: industryResultsFilteredChartsData, //locationsFilteredChartsData, //chartsData,
         }
     ]
 };
