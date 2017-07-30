@@ -6,7 +6,7 @@ const UniqueIndustries = getListOfIndustries(EmploymentData);
 $(document).ready(function(){
 
     // // On click of location search
-    $('#location-search-button').on("click", function() { 
+    $('#location-search-button').on("click", function() {
         $('.form-industry').hide();
         $('.form-location').removeClass("col-md-6");
         $('.form-location').addClass("col-md-12");
@@ -20,7 +20,7 @@ $(document).ready(function(){
     });
 
     // // On click of industry search
-    $('#industry-search-button').on("click", function() { 
+    $('#industry-search-button').on("click", function() {
        $('.form-location').hide();
        $('.form-industry').removeClass("col-md-6");
        $('.form-industry').addClass("col-md-12");
@@ -88,7 +88,8 @@ function displayResultsForIndustry(industry)  {
   $('.home-container').fadeOut('slow');
   var locations = rankLocationsByIndustry(industry);
   $('.results-container').fadeIn('slow');
-  instantiateMaps('industry-map-container', -27.469771, 153.025124);
+  instantiateMaps('industry-map-container', -12.043333, -77.028333);
+  updateText("INDUSTRY", industry);
 }
 
 function displayResultsForLocation(location)  {
@@ -96,7 +97,18 @@ function displayResultsForLocation(location)  {
   $('.home-container').fadeOut('slow');
   var industries = rankIndustriesByLocation(location);
   $('.results-container').fadeIn('slow');
-  instantiateMaps('location-map-container', -27.469771, 153.025124);
+  instantiateMaps('location-map-container', -12.043333, -77.028333);
+  updateText("SUBURB", location);
+}
+
+function updateText(typeOfSearch, inputText) {
+  $('.top-content').html(
+    "<h3>" + typeOfSearch + "</h3><br />" +
+    "<p>" + inputText + "</p>"
+  );
+  //$('.middle-content')
+  //$('.bottom-content')
+
 }
 
 function instantiateMaps(div, latitude, longitude) {
