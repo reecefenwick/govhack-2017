@@ -91,10 +91,8 @@ function displayResultsForIndustry(industry)  {
   $('.home-container').fadeOut('slow');
   var locations = rankLocationsByIndustry(industry);
   $('.results-container').fadeIn('slow');
-<<<<<<< HEAD
   instantiateMaps('industry-map-container', -12.043333, -77.028333);
   updateText("INDUSTRY", industry);
-=======
   var latitude = 0;
   var longitude = 0;
   var latLongLocation = locations[0].location;
@@ -105,7 +103,6 @@ function displayResultsForIndustry(industry)  {
   	}
   });
   instantiateMaps('industry-map-container', latitude, longitude);
->>>>>>> 2080a92ed41cecc2f6312ebdfd95e8e1040d1791
 }
 
 function displayResultsForLocation(location)  {
@@ -113,7 +110,6 @@ function displayResultsForLocation(location)  {
   $('.home-container').fadeOut('slow');
   var industries = rankIndustriesByLocation(location);
   $('.results-container').fadeIn('slow');
-<<<<<<< HEAD
   instantiateMaps('location-map-container', -12.043333, -77.028333);
   updateText("SUBURB", location);
 }
@@ -125,8 +121,6 @@ function updateText(typeOfSearch, inputText) {
   );
   //$('.middle-content')
   //$('.bottom-content')
-
-=======
   var latitude = 0;
   var longitude = 0;
   _.forEach(locationNameToLatLong, function(locationObj) {
@@ -136,7 +130,6 @@ function updateText(typeOfSearch, inputText) {
   	}
   });
   instantiateMaps('location-map-container', latitude, longitude);
->>>>>>> 2080a92ed41cecc2f6312ebdfd95e8e1040d1791
 }
 
 function instantiateMaps(div, latitude, longitude) {
