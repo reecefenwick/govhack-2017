@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+html, body {
+  height:100%;
+  width:100%;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+a, a:hover { text-decoration: none; }
+
+h1 {
+  font-family: 'Secular One', sans-serif;
+  font-size: 4.5em;
+}
+
+h2 {
+  font-family: 'Secular One', sans-serif;
+  font-size: 2em;
+  color: lightgray;
+}
+
+.search-input {
+  width:80%;
+  font-size: 2.8em;
+  font-family: 'Roboto', sans-serif;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  -webkit-border-radius: 50;
+  -moz-border-radius: 50;
+  border-radius: 50px;
+  border:none !important;
+  padding-left: 50px;
+}
+
+.vertical-center {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.home-button {
+  cursor: pointer;
+  -webkit-border-radius: 50;
+  -moz-border-radius: 50;
+  border-radius: 50px;
+  font-family: 'Secular One', sans-serif;
+  font-size: 1.7em;
+  background: #ffffff;
+  padding: 12px 100px 12px 100px;
+  text-decoration: none;
+}
+
+.blue-font { color:#2980b9; }
+
+.green-font { color:#36d977; }
+
+.row {
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+}
+
+.quarter-height { height:25%; }
+
+.half-height { height:50%; }
+
+.full-height {
+  height:100%;
+  width:100%;
+}
+
+.header-container { height:30%; }
+
+.no-width { width:0px; }
+
+.form-container { height:70%; }
+
+.description-text {
+  font-weight: 50;
+  font-size: 2.8em;
+  color: white;
+}
+
+.home-form {
+  height:100%;
+  background-size: auto 200%;
+  -webkit-transition: width 2s ease, margin 2s ease, left 2s;
+  -moz-transition: width 2s ease, margin 2s ease, left 2s;
+  -o-transition: width 2s ease, margin 2s ease, left 2s;
+  transition: width 2s ease, margin 2s ease, left 2s;
+}
+
+.form-industry { background-image: url('../img/bg-industry.jpg'); }
+
+.form-location { background-image: url('../img/bg-location.jpg'); }
+
+.header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.home-container {
+  height: 100%;
+  width: 100%;
+}
+
+.typeahead {
+  background: transparent !important;
+  width: 80% !important;
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 1.7em !important;
+  font-weight: 100 !important;
+  border: none !important;
+  -webkit-box-shadow: none !important; 
+  box-shadow: none !important; 
+}
+
+.dropdown-item {
+  background-color: transparent !important;
+  margin-left: 30px !important;
+  color: white !important;
+}
