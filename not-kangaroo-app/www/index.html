@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Not Kangaroo</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <style>
+        @-ms-viewport { width: 100vw ; zoom: 100% ; }  @viewport { width: 100vw ; zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; }           @viewport { user-zoom: fixed ; }
+    </style>
+
+    <script src="cordova.js"></script>          <!-- phantom library, needed for Cordova api calls, added during build -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+    <script src="js/app.js"></script>           <!-- recommended location of your JavaScript code relative to other JS files -->
+    <script src="xdk/init-dev.js"></script>     <!-- normalizes device and document ready events, see README for details -->
+    <style>
+        body {
+            text-align: center;
+            background-color: black;
+        }
+        .button {
+            background-color:#ffcc00;
+            -moz-border-radius:15px;
+            -webkit-border-radius:15px;
+            border-radius:15px;
+            border:2px solid black;
+            cursor:pointer;
+            color:black;
+            font-family:Lobster;
+            font-size:28px;
+            padding:15px 35px;
+            position: absolute;
+            bottom: 15%;
+            left:25%;
+        }
+        .kangaroo-header {
+            width:100%;
+            position:absolute;
+            top:0;
+            left:0;
+        }
+        #background-image-container {
+            width:100%;
+        }
+    </style>
+
+</head>
+<body>
+    <img src="./img/yes.png" id="kangaroo" class="kangaroo-header">
+    <img src="./img/not.png" id="not-kangaroo" class="kangaroo-header">
+    <img id="background-image-container">
+    <div class="button" id="go-again" onclick="callCamera()">Go Again</div>
+</body>
+</html>
