@@ -7,6 +7,6 @@
     "serverless-single-page-app-plugin": "^1.0.2"
   },
   "scripts": {
-    "deploy": "aws s3 sync plain s3://govhack2017-reece"
+    "deploy": "aws s3 sync plain s3://govhack2017-reece && aws s3 sync kangaroo s3://not-a-kangaroo"
   }
 }
