@@ -5,92 +5,9 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>NotKangaroo.SPACE</title>
+    <link rel="icon" type="image/png" href="favicon.png" sizes="32x32" />
   </head>
 
-  <style>
-  .search1{
-    height:90vh;
-    background-color:#0dc3a0;
-    color:#0dc3a0;
-    background:url("img/bg-industry.jpg");
-    padding-top:20%;
-    -webkit-transition: width 1s; /* For Safari 3.1 to 6.0 */
-    transition: width 1s;
-    width:50vw;
-  }
-  .search2{
-    height: 90vh;
-    background-color:#008aff;
-    color:#008aff;
-    background:url("img/bg-location.jpg");
-    padding-top:20%;
-    -webkit-transition: width 1s; /* For Safari 3.1 to 6.0 */
-    transition: width 1s;
-    width:50vw;
-    right:0;
-    position:absolute;
-  }
-
-  .search1 .btn, .search2 .btn{
-    background:white;
-    border-radius: 50px;
-    font-size:15px;
-    text-align: center;
-  }
-
-  .searchfield{
-    font-size:15px;
-    border-radius: 50px;
-    padding:5px;
-    border:none;
-  }
-  #industryForm, #locationForm{
-    display: none;
-  }
-
-  .search1 p, .search2 p{
-    color:white;
-    font-size:3em;
-    text-align: center;
-  }
-
-.back{
-  display:none;
-  position:fixed;
-  z-index: 10;
-  font-size:20pt;
-  margin-top:50vh;
-  cursor: pointer;
-}
-
-.hidden_results {
-  display:none;
-}
-
-.red {
-  background-color: red;
-}
-
-.black {
-  background-color: black;
-}
-
-#back1{
-  right:20px;
-}
-#back2{
-  left:20px;
-}
-  .test{
-    height:90vh;
-  }
-
-#navbarSupportedContent{
-
-  min-height: 100px;
-}
-
-  </style>
   <body>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
@@ -106,24 +23,20 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-
+      <!--<li class="nav-item active">-->
+        <!--<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
+      <!--</li>-->
     </ul>
 
   </div>
 </nav>
 
-    <div class="container-fluid">
-<div class="row">
-  <div class="col-xs-12">
-<iframe width="100%" height="520" frameborder="0" src="https://rf321.carto.com/viz/f7bcf40d-b364-4e86-85cd-75741e1e3314/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
-</div>
-</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12">
+      <iframe width="100%" style="height: 90vh" frameborder="0" src="https://rf321.carto.com/viz/f7bcf40d-b364-4e86-85cd-75741e1e3314/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+    </div>
+  </div>
 </div>
   </body>
 </html>
