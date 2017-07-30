@@ -136,9 +136,5 @@ h2 {
 }
 
 .content-container {
-  background-color: rgba(0,0,255,.2);
-}
-
-.map-container {
-  background-color: rgba(0,255,0,.2);
+  /*background-color: rgba(0,0,255,.2);*/
 }
