@@ -3,7 +3,6 @@ const EmploymentData = [{"Level":4,"Industry":"Agriculture, Forestry and Fishing
 const UniqueLocations = getListOfLocations(EmploymentData);
 const UniqueIndustries = getListOfIndustries(EmploymentData);
 
-
 $(document).ready(function(){
 
     // // On click of location search
@@ -33,7 +32,6 @@ $(document).ready(function(){
            $('#industry-form-container').removeClass("vertical-center");
        });
     });
-
 });
 
 function initLocationTypeahead(dataSource) {
@@ -45,6 +43,7 @@ function initLocationTypeahead(dataSource) {
       updater: displayResultsForLocation
     });
 }
+
 
 function initIndustryTypeahead(dataSource) {
     const input = $("#industry-search-input");
@@ -85,18 +84,17 @@ const rankIndustriesByLocation = (location) => {
 };
 
 function displayResultsForIndustry(industry)  {
-  console.log(`Locations for ${industry} ordered by their projected growth`);
-  const locationsOrderedByGrowthForIndustry = rankLocationsByIndustry(industry);
-  console.log(JSON.stringify(locationsOrderedByGrowthForIndustry, null, 2));
-  // Get top locations for industry
-  // TODO RF - Update results container
+  console.log(industry);
+  $('.home-container').fadeOut('slow');
+  var locations = rankLocationsByIndustry(industry);
+  $('.results-container').fadeIn('slow');
 }
 
 function displayResultsForLocation(location)  {
-  const industriesOrderedByGrowth = rankIndustriesByLocation(location);
-  console.log(`Industries for ${location} ordered by their projected growth`);
-  console.log(JSON.stringify(industriesOrderedByGrowth, null, 2));
-  // TODO RF - Update results container
+  console.log(location);
+  $('.home-container').fadeOut('slow');
+  var industries = rankIndustriesByLocation(location);
+  $('.results-container').fadeIn('slow');
 }
 
 

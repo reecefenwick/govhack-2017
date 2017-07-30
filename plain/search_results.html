@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Binzinga.TECH</title>
+  </head>
+
+  <style>
+  .search1{
+    height:90vh;
+    background-color:#0dc3a0;
+    color:#0dc3a0;
+    background:url("img/bg-industry.jpg");
+    padding-top:20%;
+    -webkit-transition: width 1s; /* For Safari 3.1 to 6.0 */
+    transition: width 1s;
+    width:50vw;
+  }
+  .search2{
+    height: 90vh;
+    background-color:#008aff;
+    color:#008aff;
+    background:url("img/bg-location.jpg");
+    padding-top:20%;
+    -webkit-transition: width 1s; /* For Safari 3.1 to 6.0 */
+    transition: width 1s;
+    width:50vw;
+    right:0;
+    position:absolute;
+  }
+
+  .search1 .btn, .search2 .btn{
+    background:white;
+    border-radius: 50px;
+    font-size:15px;
+    text-align: center;
+  }
+
+  .searchfield{
+    font-size:15px;
+    border-radius: 50px;
+    padding:5px;
+    border:none;
+  }
+  #industryForm, #locationForm{
+    display: none;
+  }
+
+  .search1 p, .search2 p{
+    color:white;
+    font-size:3em;
+    text-align: center;
+  }
+
+.back{
+  display:none;
+  position:fixed;
+  z-index: 10;
+  font-size:20pt;
+  margin-top:50vh;
+  cursor: pointer;
+}
+
+.hidden_results {
+  display:none;
+}
+
+.red {
+  background-color: red;
+}
+
+.black {
+  background-color: black;
+}
+
+#back1{
+  right:20px;
+}
+#back2{
+  left:20px;
+}
+  .test{
+    height:90vh;
+  }
+
+#searchResults {
+text-align: center;
+}
+
+.hidden_bullets {
+  list-style-type: none;
+}
+
+  </style>
+  <body>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js" integrity="sha256-N2Q5nbMunuogdOHfjiuzPsBMhoB80TFONAfO7MLhac0=" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/vue"></script>
+
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" alt="Bizinga"></a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+    <div class="container-fluid">
+  <div id="searchResults" class="row">
+      <div id="searchItems" class="col-xs-4">
+         <h2>Location</h2>
+        <h6 id="app">{{ title }}</h6>
+          <h2>Top Industries</h2>
+          <div id="example-1">
+            <p v-for="item in items">
+              {{ item.message }}</p>
+          </div>
+          <h2>Demographics</h2>
+          <div id="example-2">
+            <p v-for="item in items">
+              {{ item.message }}</p>
+          </div>
+      </div>
+      <div class="col-xs-8">
+        <canvas id="canvas" width="400" height="400"></canvas>
+          <!-- <iframe width="100%" height="520" frameborder="0" src="https://rf321.carto.com/viz/f7bcf40d-b364-4e86-85cd-75741e1e3314/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe> -->
+      </div>
+  </div>
+</div>
+<script
+  src="http://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+
+<script>
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    title:'St Lucia',
+    message: 'Hello Vue!'
+  }
+})
+var example1 = new Vue({
+  el: '#example-1',
+  data: {
+    items: [
+      { message: 'Foo' },
+      { message: 'Bar' }
+    ]
+  }
+})
+var example2 = new Vue({
+  el: '#example-1',
+  data: {
+    items: [
+      { message: 'Foo' },
+      { message: 'Bar' }
+    ]
+  }
+})
+</script>
+  </body>
+</html>

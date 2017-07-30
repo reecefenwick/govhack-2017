@@ -47,3 +47,58 @@ function getListOfIndustries(EmploymentProjections) {
 function getListOfLocations(EmploymentProjections) {
   return Array.from(new Set(EmploymentProjections.filter(p => p.Level === 6).map(p => p.Region)));
 }
+
+
+var chartsData = [];
+for (var i = 0; i < EmploymentProjections.length; i++) {
+    chartsData.push(EmploymentProjections[i].ProjectedEmploymentLevel);
+}
+
+var chartsLabels = [];
+for (var i = 0; i < EmploymentProjections.length; i++) {
+    chartsLabels.push(EmploymentProjections[i].Region);
+}
+chartsIndustries = [];
+for (var i = 0; i < EmploymentProjections.length; i++) {
+    chartsIndustries.push(EmploymentProjections[i].Industry);
+}
+
+var ctx = document.getElementById("canvas").getContext('2d');
+
+var canvas = document.getElementById('canvas');
+var data = {
+    labels: chartsLabels,
+    //  ["January", "February", "March", "April", "May", "June", "July"],
+    datasets: [
+        {
+            label: "Projected Employment Level by 2020",
+            backgroundColor: "rgba(255,99,132,0.2)",
+            borderColor: "rgba(255,99,132,1)",
+            borderWidth: 2,
+            hoverBackgroundColor: "rgba(255,99,132,0.4)",
+            hoverBorderColor: "rgba(255,99,132,1)",
+            data: chartsData,
+        }
+    ]
+};
+var option = {
+	scales: {
+  	yAxes:[{
+    		stacked:true,
+        gridLines: {
+        	display:true,
+          color:"rgba(255,99,132,0.2)"
+        }
+    }],
+    xAxes:[{
+    		gridLines: {
+        	display:false
+        }
+    }]
+  }
+};
+
+var myBarChart = Chart.Bar(canvas,{
+	data:data,
+  options:option
+});
