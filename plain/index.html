@@ -14,10 +14,10 @@
     <div class="home-container">
       <div class="row header-container">
         <div class="row half-height vertical-center">
-          <img src="img/logo.png" height="100" alt="Bizinga.tech">
+          <img src="img/logo.png" id="logo" height="100" alt="Bizinga.tech">
         </div>
         <div class="row half-height">
-          <h2> bizinga.tech assists aspiring entrepreneurs in the planning phase of their start-up journey. </h2>
+          <h2> bizinga.tech assists aspiring entrepreneurs <br> in the planning phase of their start-up journey. </h2>
         </div>
       </div>
       <div class="row form-container">
@@ -29,6 +29,7 @@
           </div>
           <div class="row quarter-height vertical-center" id="industry-form-container">
             <a class="home-button blue-font" id="industry-search-button">Search by Industry</a>
+            <!-- <a class="home-button blue-font" id="industry-data-button" href="">View Industry Data</a> -->
             <div class="form-group" id="industry-search-form" hidden>
               <input type="text" class="search-input" id="industry-search-input" placeholder="Search for an industry...">
             </div>
@@ -43,6 +44,7 @@
           </div>
           <div class="row quarter-height vertical-center" id="location-form-container">
             <a class="home-button green-font" id="location-search-button">Search by Location</a>
+            <!-- <a class="home-button green-font" href="" id="location-data-button">View Location Data</a> -->
             <div class="form-group" id="location-search-form" hidden>
               <input type="text" class="search-input" id="location-search-input" placeholder="Search for a suburb or region...">
             </div>
@@ -54,12 +56,16 @@
     <div class="results-container full-height" hidden>
       <div class="row full-height">
         <div class="col-md-3 full-height-not-width content-container">
-          <div class="third-height top-content"></div>
-          <div class="third-height middle-content"></div>
-          <div class="third-height bottom-content"></div>
+          <div class="third-height vertical-center top-content"></div>
+          <div class="third-height vertical-center middle-content"></div>
+          <div class="third-height vertical-cetner bottom-content"></div>
         </div>
-        <div class="col-md-9 full-height-not-width map-container" id="location-map-container" hidden></div>
-        <div class="col-md-9 full-height-not-width map-container" id="industry-map-container" hidden></div>
+        <div class="col-md-9 full-height-not-width map-container" id="location-map-container" hidden>
+          <a class="graph-button green-font" id="view-graph-button">View Graphs</a>
+        </div>
+        <div class="col-md-9 full-height-not-width map-container" id="industry-map-container" hidden>
+          <a class="graph-button green-font" id="view-graph-button">View Graphs</a>
+        </div>
         <div class="col-md-9 full-height-not-width chart-container" id="chart-container" hidden><canvas id="canvas" height="100%" width="100%"></div>
       </div>
     </div>
@@ -69,6 +75,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.js"></script>
   <script src="https://unpkg.com/vue"></script>
   <script src="./js/bootstrap-typeahead.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js"></script>
   <script src="./js/script.js"></script>
   </body>
 </html>

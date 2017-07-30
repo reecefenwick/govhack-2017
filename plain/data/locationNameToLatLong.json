@@ -1,0 +1,447 @@
+[
+ {
+   "name": "Capital Region",
+   "lat": 149.0449191,
+   "long": -36.52967436
+ },
+ {
+   "name": "Central Coast",
+   "lat": 151.2876545,
+   "long": -33.30991422
+ },
+ {
+   "name": "Central West",
+   "lat": 148.3368626,
+   "long": -33.40500024
+ },
+ {
+   "name": "Coffs Harbour - Grafton",
+   "lat": 152.7738587,
+   "long": -29.81602489
+ },
+ {
+   "name": "Far West and Orana",
+   "lat": 145.0269416,
+   "long": -30.9861075
+ },
+ {
+   "name": "Hunter Valley exc Newcastle",
+   "lat": 150.9846652,
+   "long": -32.35475124
+ },
+ {
+   "name": "Illawarra",
+   "lat": 150.7710555,
+   "long": -34.43463303
+ },
+ {
+   "name": "Mid North Coast",
+   "lat": 152.2467804,
+   "long": -31.89580537
+ },
+ {
+   "name": "Murray",
+   "lat": 144.0433734,
+   "long": -34.42276388
+ },
+ {
+   "name": "New England and North West",
+   "lat": 150.7019186,
+   "long": -30.06335457
+ },
+ {
+   "name": "Newcastle and Lake Macquarie",
+   "lat": 151.4683058,
+   "long": -33.08064692
+ },
+ {
+   "name": "Richmond - Tweed",
+   "lat": 153.0637417,
+   "long": -28.74362933
+ },
+ {
+   "name": "Riverina",
+   "lat": 146.8299213,
+   "long": -34.93504636
+ },
+ {
+   "name": "Southern Highlands and Shoalhaven",
+   "lat": 150.3657779,
+   "long": -34.87393789
+ },
+ {
+   "name": "Sydney - Baulkham Hills and Hawkesbury",
+   "lat": 150.8288319,
+   "long": -33.36855445
+ },
+ {
+   "name": "Sydney - Blacktown",
+   "lat": 150.8645409,
+   "long": -33.74109143
+ },
+ {
+   "name": "Sydney - City and Inner South",
+   "lat": 151.1924648,
+   "long": -33.91712064
+ },
+ {
+   "name": "Sydney - Eastern Suburbs",
+   "lat": 151.2482493,
+   "long": -33.91582307
+ },
+ {
+   "name": "Sydney - Inner South West",
+   "lat": 151.0670287,
+   "long": -33.93570343
+ },
+ {
+   "name": "Sydney - Inner West",
+   "lat": 151.1266565,
+   "long": -33.88847512
+ },
+ {
+   "name": "Sydney - North Sydney and Hornsby",
+   "lat": 151.1107777,
+   "long": -33.69404497
+ },
+ {
+   "name": "Sydney - Northern Beaches",
+   "lat": 151.2495775,
+   "long": -33.69034632
+ },
+ {
+   "name": "Sydney - Outer South West",
+   "lat": 150.681717,
+   "long": -34.12262827
+ },
+ {
+   "name": "Sydney - Outer West and Blue Mountains",
+   "lat": 150.3804409,
+   "long": -33.8741632
+ },
+ {
+   "name": "Sydney - Parramatta",
+   "lat": 151.0053138,
+   "long": -33.82609689
+ },
+ {
+   "name": "Sydney - Ryde",
+   "lat": 151.1008141,
+   "long": -33.78736819
+ },
+ {
+   "name": "Sydney - South West",
+   "lat": 150.8080352,
+   "long": -33.90223941
+ },
+ {
+   "name": "Sydney - Sutherland",
+   "lat": 151.0842505,
+   "long": -34.1262121
+ },
+ {
+   "name": "Ballarat",
+   "lat": 143.7346291,
+   "long": -37.37556404
+ },
+ {
+   "name": "Bendigo",
+   "lat": 144.0944531,
+   "long": -36.60067926
+ },
+ {
+   "name": "Geelong",
+   "lat": 144.1261805,
+   "long": -38.11087976
+ },
+ {
+   "name": "Hume",
+   "lat": 146.4136818,
+   "long": -36.77618053
+ },
+ {
+   "name": "Latrobe - Gippsland",
+   "lat": 147.4274953,
+   "long": -37.72341399
+ },
+ {
+   "name": "Melbourne - Inner",
+   "lat": 144.9645176,
+   "long": -37.80016871
+ },
+ {
+   "name": "Melbourne - Inner East",
+   "lat": 145.1048603,
+   "long": -37.80477875
+ },
+ {
+   "name": "Melbourne - Inner South",
+   "lat": 145.0265997,
+   "long": -37.92679837
+ },
+ {
+   "name": "Melbourne - North East",
+   "lat": 145.1692082,
+   "long": -37.52069494
+ },
+ {
+   "name": "Melbourne - North West",
+   "lat": 144.7458178,
+   "long": -37.47597158
+ },
+ {
+   "name": "Melbourne - Outer East",
+   "lat": 145.5176463,
+   "long": -37.72646284
+ },
+ {
+   "name": "Melbourne - South East",
+   "lat": 145.4681496,
+   "long": -38.0731871
+ },
+ {
+   "name": "Melbourne - West",
+   "lat": 144.6249507,
+   "long": -37.77646428
+ },
+ {
+   "name": "Mornington Peninsula",
+   "lat": 145.1091511,
+   "long": -38.27733985
+ },
+ {
+   "name": "North West",
+   "lat": 142.2377696,
+   "long": -35.86805538
+ },
+ {
+   "name": "Shepparton",
+   "lat": 145.2529289,
+   "long": -36.23847781
+ },
+ {
+   "name": "Warrnambool and South West",
+   "lat": 141.7108278,
+   "long": -37.72130132
+ },
+ {
+   "name": "Brisbane - East",
+   "lat": 153.215775,
+   "long": -27.54459016
+ },
+ {
+   "name": "Brisbane - North",
+   "lat": 153.0599513,
+   "long": -27.36803278
+ },
+ {
+   "name": "Brisbane - South",
+   "lat": 153.0694875,
+   "long": -27.56696902
+ },
+ {
+   "name": "Brisbane - West",
+   "lat": 152.9031332,
+   "long": -27.47994538
+ },
+ {
+   "name": "Brisbane Inner City",
+   "lat": 153.0182835,
+   "long": -27.44545355
+ },
+ {
+   "name": "Cairns",
+   "lat": 145.4853413,
+   "long": -17.72374559
+ },
+ {
+   "name": "Darling Downs - Maranoa",
+   "lat": 149.3556692,
+   "long": -27.3166848
+ },
+ {
+   "name": "Central Queensland",
+   "lat": 149.3137877,
+   "long": -24.11658724
+ },
+ {
+   "name": "Gold Coast",
+   "lat": 153.2677648,
+   "long": -28.01690754
+ },
+ {
+   "name": "Ipswich",
+   "lat": 152.5506568,
+   "long": -27.61021244
+ },
+ {
+   "name": "Logan - Beaudesert",
+   "lat": 152.9639667,
+   "long": -27.99893884
+ },
+ {
+   "name": "Mackay - Isaac - Whitsunday",
+   "lat": 147.9190542,
+   "long": -21.74759327
+ },
+ {
+   "name": "Moreton Bay - North",
+   "lat": 152.5252854,
+   "long": -26.85363228
+ },
+ {
+   "name": "Moreton Bay - South",
+   "lat": 152.879785,
+   "long": -27.30353397
+ },
+ {
+   "name": "Queensland - Outback",
+   "lat": 142.5268934,
+   "long": -21.82140945
+ },
+ {
+   "name": "Sunshine Coast",
+   "lat": 152.9089139,
+   "long": -26.58889972
+ },
+ {
+   "name": "Toowoomba",
+   "lat": 152.0744085,
+   "long": -27.56721845
+ },
+ {
+   "name": "Townsville",
+   "lat": 145.9310657,
+   "long": -20.04229553
+ },
+ {
+   "name": "Wide Bay",
+   "lat": 151.7371842,
+   "long": -25.638573
+ },
+ {
+   "name": "Adelaide - Central and Hills",
+   "lat": 138.8374601,
+   "long": -34.97128818
+ },
+ {
+   "name": "Adelaide - North",
+   "lat": 138.6649003,
+   "long": -34.68722791
+ },
+ {
+   "name": "Adelaide - South",
+   "lat": 138.5714431,
+   "long": -35.14285121
+ },
+ {
+   "name": "Adelaide - West",
+   "lat": 138.5302652,
+   "long": -34.8797703
+ },
+ {
+   "name": "Barossa - Yorke - Mid North",
+   "lat": 138.7240105,
+   "long": -33.31382008
+ },
+ {
+   "name": "South Australia - Outback",
+   "lat": 135.3774999,
+   "long": -29.48276424
+ },
+ {
+   "name": "South Australia - South East",
+   "lat": 140.1052648,
+   "long": -35.68940414
+ },
+ {
+   "name": "Bunbury",
+   "lat": 116.0092307,
+   "long": -33.95479218
+ },
+ {
+   "name": "Mandurah",
+   "lat": 115.854482,
+   "long": -32.62512013
+ },
+ {
+   "name": "Perth - Inner",
+   "lat": 115.8098757,
+   "long": -31.95619311
+ },
+ {
+   "name": "Perth - North East",
+   "lat": 116.1340146,
+   "long": -31.80843412
+ },
+ {
+   "name": "Perth - North West",
+   "lat": 115.7696513,
+   "long": -31.6621802
+ },
+ {
+   "name": "Perth - South East",
+   "lat": 116.0628839,
+   "long": -32.20671797
+ },
+ {
+   "name": "Perth - South West",
+   "lat": 115.8127772,
+   "long": -32.23253898
+ },
+ {
+   "name": "Western Australia - Wheat Belt",
+   "lat": 117.9184759,
+   "long": -32.06698175
+ },
+ {
+   "name": "Western Australia - Outback (North)",
+   "lat": 123.7245237,
+   "long": -20.04891568
+ },
+ {
+   "name": "Western Australia - Outback (South)",
+   "lat": 125.0406012,
+   "long": -28.08507459
+ },
+ {
+   "name": "Hobart",
+   "lat": 147.254217,
+   "long": -42.95823198
+ },
+ {
+   "name": "Launceston and North East",
+   "lat": 147.7571703,
+   "long": -41.56561177
+ },
+ {
+   "name": "South East",
+   "lat": 146.8219648,
+   "long": -42.6076277
+ },
+ {
+   "name": "West and North West",
+   "lat": 145.5618718,
+   "long": -41.73096737
+ },
+ {
+   "name": "Darwin",
+   "lat": 131.1082998,
+   "long": -12.53092143
+ },
+ {
+   "name": "Northern Territory - Outback",
+   "lat": 133.3744411,
+   "long": -19.49466791
+ },
+ {
+   "name": "Australian Capital Territory",
+   "lat": 149.0025231,
+   "long": -35.48876608
+ },
+ {
+   "name": "Other Territories",
+   "lat": 105.6364707,
+   "long": -10.48535547
+ }
+]
