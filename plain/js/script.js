@@ -92,7 +92,6 @@ function displayResultsForIndustry(industry)  {
   var locations = rankLocationsByIndustry(industry);
   $('.results-container').fadeIn('slow');
   instantiateMaps('industry-map-container', -12.043333, -77.028333);
-  updateText("INDUSTRY", industry);
   var latitude = 0;
   var longitude = 0;
   var latLongLocation = locations[0].location;
@@ -103,7 +102,7 @@ function displayResultsForIndustry(industry)  {
   	}
   });
   instantiateMaps('industry-map-container', latitude, longitude);
-  updateText("INDUSTRY", industry);
+  updateText("INDUSTRY", industry, locations);
 }
 
 function displayResultsForLocation(location)  {
@@ -121,19 +120,24 @@ function displayResultsForLocation(location)  {
   	}
   });
   instantiateMaps('location-map-container', latitude, longitude);
-  updateText("SUBURB", location);
+  updateText("SUBURB", location, industries);
 }
 
-function updateText(typeOfSearch, inputText) {
+function updateText(typeOfSearch, inputText, resultset) {
   $('.top-content').html(
     "<ul><li><h3>" + typeOfSearch + "</h3></li>" +
-    "<li><p>" + inputText + "</p></li></ul>"
+    "<li><p>" + inputText + "</p></li></ul>" +
+    "<ul><li><h3>PERIOD</h3></li>" +
+    "<li><p>Current (2017)</p></li></ul>"
   );
-<<<<<<< HEAD
-  //$('.middle-content')
-  //$('.bottom-content')
-=======
->>>>>>> 2083c6c2460247f06ad6159d69b06df8638000d2
+
+  $('.middle-content').html(
+    "<ul><li><h3>TOP</h3></li>" +
+    "<li><p>" + resultset[0].location + "</p></li>" +
+    "<li><p>" + resultset[1].location + "</p></li>" +
+    "<li><p>" + resultset[2].location + "</p></li></ul>"
+  );
+  $('.bottom-content')
 }
 
 function instantiateMaps(div, latitude, longitude) {
