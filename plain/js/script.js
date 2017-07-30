@@ -131,13 +131,23 @@ function updateText(typeOfSearch, inputText, resultset) {
     "<li><p>Current (2017)</p></li></ul>"
   );
 
-  $('.middle-content').html(
-    "<ul><li><h3>TOP</h3></li>" +
-    "<li><p>" + resultset[0].location + "</p></li>" +
-    "<li><p>" + resultset[1].location + "</p></li>" +
-    "<li><p>" + resultset[2].location + "</p></li></ul>"
-  );
-  $('.bottom-content')
+
+  if (typeOfSearch == "SUBURB") {
+    $('.middle-content').html(
+      "<ul><li><h3>TOP INDUSTRIES</h3></li>" +
+      "<li><p>" + resultset[0].Industry + "</p></li>" +
+      "<li><p>" + resultset[1].Industry + "</p></li>" +
+      "<li><p>" + resultset[2].Industry + "</p></li></ul>"
+    );
+  } else if (typeOfSearch == "INDUSTRY") {
+    $('.middle-content').html(
+      "<ul><li><h3>TOP LOCATIONS</h3></li>" +
+      "<li><p>" + resultset[0].location + "</p></li>" +
+      "<li><p>" + resultset[1].location + "</p></li>" +
+      "<li><p>" + resultset[2].location + "</p></li></ul>"
+    );
+  }
+  //$('.bottom-content')
 }
 
 function instantiateMaps(div, latitude, longitude) {
