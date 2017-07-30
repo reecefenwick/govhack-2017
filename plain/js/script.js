@@ -103,6 +103,7 @@ function displayResultsForIndustry(industry)  {
   	}
   });
   instantiateMaps('industry-map-container', latitude, longitude);
+  updateText("INDUSTRY", industry);
 }
 
 function displayResultsForLocation(location)  {
@@ -111,6 +112,15 @@ function displayResultsForLocation(location)  {
   var industries = rankIndustriesByLocation(location);
   $('.results-container').fadeIn('slow');
   instantiateMaps('location-map-container', -12.043333, -77.028333);
+  var latitude = 0;
+  var longitude = 0;
+  _.forEach(locationNameToLatLong, function(locationObj) {
+  	if (locationObj.name == location) {
+  	  longitude = locationObj.lat;
+  	  latitude = locationObj.long;
+  	}
+  });
+  instantiateMaps('location-map-container', latitude, longitude);
   updateText("SUBURB", location);
 }
 
