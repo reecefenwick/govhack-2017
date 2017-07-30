@@ -131,15 +131,6 @@ function updateText(typeOfSearch, inputText) {
   );
   //$('.middle-content')
   //$('.bottom-content')
-  var latitude = 0;
-  var longitude = 0;
-  _.forEach(locationNameToLatLong, function(locationObj) {
-  	if (locationObj.name == location) {
-  	  longitude = locationObj.lat;
-  	  latitude = locationObj.long;
-  	}
-  });
-  instantiateMaps('location-map-container', latitude, longitude);
 }
 
 function instantiateMaps(div, latitude, longitude) {
