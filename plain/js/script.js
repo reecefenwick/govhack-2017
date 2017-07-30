@@ -129,8 +129,11 @@ function updateText(typeOfSearch, inputText) {
     "<ul><li><h3>" + typeOfSearch + "</h3></li>" +
     "<li><p>" + inputText + "</p></li></ul>"
   );
+<<<<<<< HEAD
   //$('.middle-content')
   //$('.bottom-content')
+=======
+>>>>>>> 2083c6c2460247f06ad6159d69b06df8638000d2
 }
 
 function instantiateMaps(div, latitude, longitude) {
