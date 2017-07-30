@@ -88,7 +88,7 @@ function displayResultsForIndustry(industry)  {
   $('.home-container').fadeOut('slow');
   var locations = rankLocationsByIndustry(industry);
   $('.results-container').fadeIn('slow');
-  instantiateMaps('industry-map-container', -12.043333, -77.028333);
+  instantiateMaps('industry-map-container', -27.469771, 153.025124);
 }
 
 function displayResultsForLocation(location)  {
@@ -96,7 +96,7 @@ function displayResultsForLocation(location)  {
   $('.home-container').fadeOut('slow');
   var industries = rankIndustriesByLocation(location);
   $('.results-container').fadeIn('slow');
-  instantiateMaps('location-map-container', -12.043333, -77.028333);
+  instantiateMaps('location-map-container', -27.469771, 153.025124);
 }
 
 function instantiateMaps(div, latitude, longitude) {
