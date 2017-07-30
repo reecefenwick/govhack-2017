@@ -1,129 +1,36 @@
 <!DOCTYPE html>
 <html lang='en'>
-  <head>
+<head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>NotKangaroo.SPACE</title>
-  </head>
-
-  <style>
-  .search1{
-    height:90vh;
-    background-color:#0dc3a0;
-    color:#0dc3a0;
-    background:url("img/bg-industry.jpg");
-    padding-top:20%;
-    -webkit-transition: width 1s; /* For Safari 3.1 to 6.0 */
-    transition: width 1s;
-    width:50vw;
-  }
-  .search2{
-    height: 90vh;
-    background-color:#008aff;
-    color:#008aff;
-    background:url("img/bg-location.jpg");
-    padding-top:20%;
-    -webkit-transition: width 1s; /* For Safari 3.1 to 6.0 */
-    transition: width 1s;
-    width:50vw;
-    right:0;
-    position:absolute;
-  }
-
-  .search1 .btn, .search2 .btn{
-    background:white;
-    border-radius: 50px;
-    font-size:15px;
-    text-align: center;
-  }
-
-  .searchfield{
-    font-size:15px;
-    border-radius: 50px;
-    padding:5px;
-    border:none;
-  }
-  #industryForm, #locationForm{
-    display: none;
-  }
-
-  .search1 p, .search2 p{
-    color:white;
-    font-size:3em;
-    text-align: center;
-  }
-
-.back{
-  display:none;
-  position:fixed;
-  z-index: 10;
-  font-size:20pt;
-  margin-top:50vh;
-  cursor: pointer;
-}
-
-.hidden_results {
-  display:none;
-}
-
-.red {
-  background-color: red;
-}
-
-.black {
-  background-color: black;
-}
-
-#back1{
-  right:20px;
-}
-#back2{
-  left:20px;
-}
-  .test{
-    height:90vh;
-  }
-
-#navbarSupportedContent{
-
-  min-height: 100px;
-}
-
-  </style>
-  <body>
-    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-  <button id="topnav" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <a class="" href="#"><img src="logo.png" height="80" alt="NotKangaroo.Space"></a>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-
-    </ul>
-
-  </div>
-</nav>
-
-    <div class="container-fluid">
-<div class="row">
-  <div class="col-xs-12">
-<iframe width="100%" height="520" frameborder="0" src="https://rf321.carto.com/viz/f7bcf40d-b364-4e86-85cd-75741e1e3314/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
-</div>
-</div>
-</div>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Open+Sans|Roboto|Secular+One" rel="stylesheet">
+    <link rel="stylesheet" href="../plain/css/style.css">
+    <title> Bizinga </title>
+  </head>
+  <body style="overflow:hidden;">
+    <div class="home-container">
+      <div class="row header-container">
+        <div class="row half-height vertical-center">
+          <img src="logo.png" id="logo" height="150" alt="Bizinga.tech">
+        </div>
+        <div class="row half-height vertical-center">
+          <h2 style="color:black;"> Find the answer to the age old question.. Is it a kangaroo!? </h2>
+        </div>
+      </div>
+      <div class="row form-container vertical-center">
+        <iframe width="100%" height="650px" frameborder="0" src="https://rf321.carto.com/viz/f7bcf40d-b364-4e86-85cd-75741e1e3314/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+      </div>
+    </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></scrript>
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyBp5Er73Wu04KmamyxcdRwlIm4Ai228yRs"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.js"></script>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="../plain/js/bootstrap-typeahead.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js"></script>
+  <script src="../plain/js/script.js"></script>
   </body>
 </html>
