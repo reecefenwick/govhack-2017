@@ -48,6 +48,26 @@ function getListOfLocations(EmploymentProjections) {
   return Array.from(new Set(EmploymentProjections.filter(p => p.Level === 6).map(p => p.Region)));
 }
 
+locationResultsFiltered = $.grep( EmploymentProjections, function( n, i ) {
+  return n.Region==='Central Coast';
+});
+
+
+var locationsFilteredChartsData = [];
+for (var i = 0; i <locationResultsFiltered.length; i++) {
+    locationsFilteredChartsData.push(locationResultsFiltered[i].ProjectedEmploymentLevel);
+}
+
+var locationsFilteredChartsLabels = [];
+for (var i = 0; i < locationResultsFiltered.length; i++) {
+    locationsFilteredChartsLabels.push(locationResultsFiltered[i].Region);
+}
+
+var locationsFilteredChartsIndustries = [];
+for (var i = 0; i < locationResultsFiltered.length; i++) {
+    locationsFilteredChartsIndustries.push(locationResultsFiltered[i].Industry);
+}
+
 
 var chartsData = [];
 for (var i = 0; i < EmploymentProjections.length; i++) {
@@ -67,7 +87,7 @@ var ctx = document.getElementById("canvas").getContext('2d');
 
 var canvas = document.getElementById('canvas');
 var data = {
-    labels: chartsLabels,
+    labels: locationsFilteredChartsIndustries, //locationsFilteredChartsLabels, //chartsLabels,
     //  ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
         {
@@ -77,7 +97,7 @@ var data = {
             borderWidth: 2,
             hoverBackgroundColor: "rgba(255,99,132,0.4)",
             hoverBorderColor: "rgba(255,99,132,1)",
-            data: chartsData,
+            data: locationsFilteredChartsData, //chartsData,
         }
     ]
 };
