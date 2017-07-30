@@ -3,7 +3,6 @@ const EmploymentData = [{"Level":4,"Industry":"Agriculture, Forestry and Fishing
 const UniqueLocations = getListOfLocations(EmploymentData);
 const UniqueIndustries = getListOfIndustries(EmploymentData);
 
-
 $(document).ready(function(){
 
     // // On click of location search
@@ -33,7 +32,6 @@ $(document).ready(function(){
            $('#industry-form-container').removeClass("vertical-center");
        });
     });
-
 });
 
 function initLocationTypeahead(dataSource) {
@@ -46,6 +44,7 @@ function initLocationTypeahead(dataSource) {
     });
 }
 
+
 function initIndustryTypeahead(dataSource) {
     const input = $("#industry-search-input");
     input.typeahead({
@@ -56,6 +55,25 @@ function initIndustryTypeahead(dataSource) {
     });
 }
 
+const rankLocationsByIndustry = (industry) => {
+  const locationProjections = new Map();
+  UniqueLocations // Init values for locations
+    .forEach(l => locationProjections.set(l, 0));
+  EmploymentData
+    .filter(d => d.Industry === industry && d.Level === 6)
+    .forEach(d => locationProjections.set(d.Region, locationProjections.get(d.Region) + d.Projection));
+  return Array.from(locationProjections.keys())
+    .map(key => {
+      const projection = locationProjections.get(key)
+      return {
+        location: key,
+        projection
+      }
+    })
+    .sort((a, b) => {
+      return b.projection - a.projection;
+    });
+}
 
 const rankIndustriesByLocation = (location) => {
   return EmploymentData
@@ -67,16 +85,16 @@ const rankIndustriesByLocation = (location) => {
 
 function displayResultsForIndustry(industry)  {
   console.log(industry);
-  // Get top locations for industry
-  // Get top industries for all locations
-  // TODO RF - Update results container
+  $('.home-container').fadeOut('slow');
+  var locations = rankLocationsByIndustry(industry);
+  $('.results-container').fadeIn('slow');
 }
 
 function displayResultsForLocation(location)  {
-  const industriesOrderedByGrowth = rankIndustriesByLocation(location);
-  console.log(`Industries for ${location} ordered by their projected growth`);
-  console.log(industriesOrderedByGrowth);
-  // TODO RF - Update results container
+  console.log(location);
+  $('.home-container').fadeOut('slow');
+  var industries = rankIndustriesByLocation(location);
+  $('.results-container').fadeIn('slow');
 }
 
 
