@@ -56,6 +56,25 @@ function initIndustryTypeahead(dataSource) {
     });
 }
 
+const rankLocationsByIndustry = (industry) => {
+  const locationProjections = new Map();
+  UniqueLocations // Init values for locations
+    .forEach(l => locationProjections.set(l, 0));
+  EmploymentData
+    .filter(d => d.Industry === industry && d.Level === 6)
+    .forEach(d => locationProjections.set(d.Region, locationProjections.get(d.Region) + d.Projection));
+  return Array.from(locationProjections.keys())
+    .map(key => {
+      const projection = locationProjections.get(key)
+      return {
+        location: key,
+        projection
+      }
+    })
+    .sort((a, b) => {
+      return b.projection - a.projection;
+    });
+}
 
 const rankIndustriesByLocation = (location) => {
   return EmploymentData
@@ -66,16 +85,17 @@ const rankIndustriesByLocation = (location) => {
 };
 
 function displayResultsForIndustry(industry)  {
-  console.log(industry);
+  console.log(`Locations for ${industry} ordered by their projected growth`);
+  const locationsOrderedByGrowthForIndustry = rankLocationsByIndustry(industry);
+  console.log(JSON.stringify(locationsOrderedByGrowthForIndustry, null, 2));
   // Get top locations for industry
-  // Get top industries for all locations
   // TODO RF - Update results container
 }
 
 function displayResultsForLocation(location)  {
   const industriesOrderedByGrowth = rankIndustriesByLocation(location);
   console.log(`Industries for ${location} ordered by their projected growth`);
-  console.log(industriesOrderedByGrowth);
+  console.log(JSON.stringify(industriesOrderedByGrowth, null, 2));
   // TODO RF - Update results container
 }
 
